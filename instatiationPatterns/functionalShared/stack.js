@@ -2,8 +2,14 @@ var Stack = function() {
   let storage = {};
   storage.index = 0;
   storage.storageSize = 0;
-  _.extend(storage, stackMethods);
+  extend(storage, stackMethods);
   return storage;
+};
+
+var extend = function(to, from) {
+  for (var key in from) {
+    to[key] = from[key];
+  }
 };
 
 var stackMethods = {};
