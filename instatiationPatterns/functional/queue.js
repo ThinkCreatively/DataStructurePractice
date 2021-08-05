@@ -1,12 +1,12 @@
 var Queue = function () {
   var someInstance = {};
 
-  // Use an object with numeric keys to store values
+  // Using a object with numeric keys to store values
   var storage = {};
   let index = 0;
   let size = 0;
 
-  // Implement the methods below
+  // Methods
 
   someInstance.enqueue = function (value) {
     storage[index] = value;
