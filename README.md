@@ -1,8 +1,12 @@
-# DataStructurePractice
-Practicing Instantiation Patterns and creating basic data structures:
+# Data Structure Practice
+### In this repo I will be: <br />
+~ Practicing Instantiation Patterns <br />
+~ Creating data structures <br />
+~ Reviewing Big O <br />
+~ Practicing Sorting Algorithms <br />
 
 ## Regarding the Instantiation Patterns: 
-~ I will be creating queues and stack data structure with three different methods to each of them
+~ I will be creating queues and stack data structures with three different methods to each of them
 
 ### Stacks: <br />
 Follow a First In Last Out pattern (FILO) <br />
@@ -17,3 +21,34 @@ Follow a First in First Out pattern (FIFO) <br />
   ~ enqueue: adds a value to the queue <br />
   ~ dequeue: removes a value from the queue <br />
   ~ size: returns the size of the queue
+
+## Regarding the Data Structures:
+~ I will be creating numerous data structures with different methods, some of the data structures I will be creating include: <br />
+### Linked List:
+#### Methods:
+~ Add to Tail <br />
+~ Remove Head <br />
+~ Contains Node <br />
+### Tree & Binary Tree:
+#### Methods:
+~ Add a child <br />
+~ Contains Child <br />
+~ Remove Child <br />
+### Set:
+#### Methods:
+~ Add Item <br />
+~ Remove Item<br />
+~ Contains Item <br />
+### Graph:
+#### Methods:
+~ Add Node <br />
+~ Remove Node <br />
+~ Add Edge <br />
+~ Remove Edge <br />
+~ Has Edge <br />
+~ Contains Node <br />
+### Hash Table:
+#### Methods:
+~ Insert Value<br />
+~ Remove Value <br />
+~ Retrieve Value <br />
