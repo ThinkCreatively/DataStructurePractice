@@ -52,3 +52,10 @@ Follow a First in First Out pattern (FIFO) <br />
 ~ Insert Value<br />
 ~ Remove Value <br />
 ~ Retrieve Value <br />
+
+## Regarding Big O Notation
+~ I will be going over examples of time & space complexities <br />
+### Time:
+Constant, Logrithimic, Linear, Exponential, Quadratic <br />
+### Space: 
+Constant, Linear
