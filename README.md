@@ -58,4 +58,13 @@ Follow a First in First Out pattern (FIFO) <br />
 ### Time:
 Constant, Logrithimic, Linear, Exponential, Quadratic <br />
 ### Space: 
-Constant, Linear
+Constant, Linear <br />
+
+## Searching Algorithms
+~ I will be implementing numerous sorting algorithms <br />
+### Bubble Sort
+### Insertion Sort
+### Merge Sort
+### Quick Sort
+### Radix Sort
+### Selection Sort
