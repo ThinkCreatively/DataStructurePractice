@@ -15,7 +15,7 @@ function selectionSort(array) {
         smallest = array[j];
         swapIndex = j;
       }
-      if (j === array.length - 1) {
+      if (j === array.length - 1 && array[swapIndex] !== array[i]) {
         [array[i], array[swapIndex]] = [array[swapIndex], array[i]]
       }
     }
