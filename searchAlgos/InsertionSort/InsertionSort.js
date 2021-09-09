@@ -6,6 +6,8 @@
 [1, 3, 4, 5, 1] -> [1, 2, 3, 4, 5]      2 after 1 before 3
 */
 
+// Long Version
+
 function insertionSort(array) {
   for (let i = 1; i < array.length; i++) {
     if (array[i] < array[i - 1]) {
@@ -21,6 +23,18 @@ function insertionSort(array) {
         }
       }
     }
+  }
+  return array;
+}
+
+// Short Version
+function insertionSort(array) {
+  for(var i = 0; i < array.length; i++) {
+    var currentValue = array[i];
+    for(var j = i - 1; j >=0 && array[j] > currentValue; j--) {
+      array[j+1] = array[j];
+    }
+    array[j+1] = currentValue;
   }
   return array;
 }
