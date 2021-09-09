@@ -9,12 +9,16 @@
 function insertionSort(array) {
   for (let i = 1; i < array.length; i++) {
     if (array[i] < array[i - 1]) {
-      for (let j = i - 1; j > 0; j--) {
-        if (array[i] > array[j]) {
-          array.splice(i, 1)
-          array.splice(j, 0, array[i]);
+      for (let j = i - 1; j > -1; j--) {
+        if (j === 0 || array[i] < array[j]) {
+          array.push(array[i]);
+          array.splice(i, 1);
         }
       }
     }
   }
+  array = array.reverse();
+  return array;
 }
+
+console.log(insertionSort([5, 3, 4, 1, 2])); // [1, 2, 3, 4, 5]
