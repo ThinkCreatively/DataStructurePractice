@@ -10,14 +10,18 @@ function insertionSort(array) {
   for (let i = 1; i < array.length; i++) {
     if (array[i] < array[i - 1]) {
       for (let j = i - 1; j > -1; j--) {
-        if (j === 0 || array[i] < array[j]) {
-          array.push(array[i]);
-          array.splice(i, 1);
+        if (j === 0 && array[i] < array[j]) {
+          array.unshift(array[i]);
+          array.splice(i + 1, 1);
+          continue;
+        }
+        if (array[i] > array[j - 1] && array[i] < array[j]) {
+          array.splice(j, 0, array[i]);
+          array.splice(i + 1, 1)
         }
       }
     }
   }
-  array = array.reverse();
   return array;
 }
 
