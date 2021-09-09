@@ -21,16 +21,16 @@ function merge(array, array2) {
 
 function merge(array, array2) {
   let result = [];
-  let pointerOne = 0;
-  let pointerTwo = 0;
+  let i = 0;
+  let j = 0;
   let length = array.length + array2.length;
   while (result.length !== length) {
-    if (array[pointerOne] < array2[pointerTwo]) {
-      result.push(array[pointerOne]);
-      pointerOne++;
+    if (array[i] < array2[j]) {
+      result.push(array[i]);
+      i++;
     } else {
-      result.push(array2[pointerTwo]);
-      pointerTwo++;
+      result.push(array2[j]);
+      j++;
     }
   }
   return result;
