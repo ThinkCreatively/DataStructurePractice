@@ -34,23 +34,34 @@ function merge(array, array2) {
 
 // Merge Sort (1st Attempt)
 
-function mergeSort(arr) {
-  // let storage = [];
-  let count = 0;
-  while (count !== arr.length) {
-    var arr2 = arr.splice(0, 1);
-    arr.push(arr2);
-    count++
+// function mergeSort(arr) {
+//   let count = 0;
+//   while (count !== arr.length) {
+//     var arr2 = arr.splice(0, 1);
+//     arr.push(arr2);
+//     count++
+//   }
+//   while (arr.length !== 1) {
+//     if (arr.length === 2) {
+//       return merge(arr[0], arr[1]);
+//     }
+//     arr.push(merge(arr[0], arr[1]));
+//     arr.splice(0, 2);
+//   }
+//   return arr;
+// }
+
+// Merge Sort Recursive (2nd Attempt)
+
+function mergeSort(arr, arr2 = []) {
+  console.log(arr, arr2)
+  if (arr.length <= 1) {
+    return;
   }
-  while (arr.length !== 1) {
-    if (arr.length === 2) {
-      return merge(arr[0], arr[1]);
-    }
-    arr.push(merge(arr[0], arr[1]));
-    arr.splice(0, 2);
-  }
-  return arr;
+  arr2 = arr.slice(arr.length / 2, arr.length);
+  arr = arr.slice(0, arr.length / 2)
+  return mergeSort(arr, arr2);
 }
 
 console.log(mergeSort([1, 9, 3, 11])) // [1, 3, 9, 11]
-console.log(mergeSort([1, 72, 3, 99, 0])) // [0, 1, 3, 72, 99]
+// console.log(mergeSort([1, 72, 3, 99, 0])) // [0, 1, 3, 72, 99]
