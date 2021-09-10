@@ -53,15 +53,13 @@ function merge(array, array2) {
 
 // Merge Sort Recursive (2nd Attempt)
 
-function mergeSort(arr, arr2 = []) {
-  console.log(arr, arr2)
-  if (arr.length <= 1) {
-    return;
-  }
-  arr2 = arr.slice(arr.length / 2, arr.length);
-  arr = arr.slice(0, arr.length / 2)
-  return mergeSort(arr, arr2);
+function mergeSort(arr) {
+  if (arr.length <= 1) return arr;
+  let midpoint = Math.floor(arr.length / 2);
+  let left = mergeSort(arr.slice(0, midpoint));
+  let right = mergeSort(arr.slice(midpoint));
+  return merge(left, right);
 }
 
 console.log(mergeSort([1, 9, 3, 11])) // [1, 3, 9, 11]
-// console.log(mergeSort([1, 72, 3, 99, 0])) // [0, 1, 3, 72, 99]
+console.log(mergeSort([1, 72, 3, 99, 0])) // [0, 1, 3, 72, 99]
