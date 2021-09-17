@@ -34,22 +34,22 @@ function merge(array, array2) {
 
 // Merge Sort (1st Attempt)
 
-// function mergeSort(arr) {
-//   let count = 0;
-//   while (count !== arr.length) {
-//     var arr2 = arr.splice(0, 1);
-//     arr.push(arr2);
-//     count++
-//   }
-//   while (arr.length !== 1) {
-//     if (arr.length === 2) {
-//       return merge(arr[0], arr[1]);
-//     }
-//     arr.push(merge(arr[0], arr[1]));
-//     arr.splice(0, 2);
-//   }
-//   return arr;
-// }
+function mergeSort(arr) {
+  let count = 0;
+  while (count !== arr.length) {
+    var arr2 = arr.splice(0, 1);
+    arr.push(arr2);
+    count++
+  }
+  while (arr.length !== 1) {
+    if (arr.length === 2) {
+      return merge(arr[0], arr[1]);
+    }
+    arr.push(merge(arr[0], arr[1]));
+    arr.splice(0, 2);
+  }
+  return arr;
+}
 
 // Merge Sort Recursive (2nd Attempt)
 
