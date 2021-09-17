@@ -44,22 +44,6 @@ function pivot(array, start = 0, end = array.length + 1) {
   return swapIndex;
 }
 
-// function pivot(arr, start = 0, end = arr.length - 1) {
-//   const swap = (arr, idx1, idx2) => {
-//     [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
-//   };
-//   let pivot = arr[start];
-//   let swapIdx = start;
-//   for (let i = start + 1; i <= end; i++) {
-//     if (pivot > arr[i]) {
-//       swapIdx++;
-//       swap(arr, swapIdx, i);
-//     }
-//   }
-//   swap(arr, start, swapIdx);
-//   return swapIdx;
-// }
-
 // console.log(pivot([5, 2, 1, 8, 4, 7, 6, 3])); // [2, 1, 4, 3, 5, 8, 7, 6] returns 5
 
 // Quick Sort Funciton
