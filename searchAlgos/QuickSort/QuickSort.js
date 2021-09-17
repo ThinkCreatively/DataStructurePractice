@@ -12,20 +12,34 @@
 
 // Pivot/Partition Helper Function
 // Returns pivot point, Alters input array
+// 1st Attempt
+// function pivot(array) {
+//   const pivotValue = array[0];
+//   let count = 0;
+//   for (let i = 1; i < array.length; i++) {
+//     if (array[i] === pivotValue) {
+//       continue;
+//     }
+//     if (array[i] < pivotValue) {
+//       array.unshift(array[i]);
+//       array.splice(i + 1, 1);
+//     }
+//   }
+//   return pivotValue;
+// }
+// 2nd Attempt
 
-function pivot(array) {
-  const pivotValue = array[0];
-  let count = 0;
-  for (let i = 1; i < array.length; i++) {
-    if (array[i] === pivotValue) {
-      continue;
-    }
-    if (array[i] < pivotValue) {
-      array.unshift(array[i]);
-      array.splice(i + 1, 1);
+function pivot(array, start = 0, end = array.length + 1) {
+  let pivot = array[start];
+  let swapIndex = start;
+  for (let i = start + 1; i < array.length; i++) {
+    if (pivot > array[i]) {
+      swapIndex++;
+      [array[i], array[swapIndex]] = [array[swapIndex], array[i]];
     }
   }
-  return pivotValue;
+  [array[start], array[swapIndex]] = [array[swapIndex], array[start]];
+  return pivot;
 }
 
 console.log(pivot([5, 2, 1, 8, 4, 7, 6, 3])); // [2, 1, 4, 3, 5, 8, 7, 6] returns 5
